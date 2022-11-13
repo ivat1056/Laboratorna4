@@ -10,7 +10,7 @@ namespace lab4
     public class Maths
      {
         const double pi = 3.14159265358979323846;
-        double Func_cos(double x, double n = 0, double precision = 1e-10)  // вычисление косинуса в радианах 
+        public double Func_cos(double x, double n = 0, double precision = 1e-10)  // вычисление косинуса в радианах 
         {
             var t = Power(-1, n) * Power(x, 2 * n) / Factorial((int)(2 * n));
             if (Abs(t) < precision)
@@ -18,10 +18,9 @@ namespace lab4
                 return t;
             }
             return t + Func_cos(x, n + 1, precision);
-
         }
 
-        double Func_sin(double x, double eps = 1e-12)  // вычисление синуса в радианах 
+        public double Func_sin(double x, double eps = 1e-12)  // вычисление синуса в радианах 
         {
             int sign = (x < 0) ? -1 : 1;
             // Приводим к [0, 2*pi]
@@ -37,19 +36,26 @@ namespace lab4
             return s * sign;
         }
 
-        double Log(double n, double r)
+        public double Log(double x, double r)
         {
-            return (n > 1) ? 1 + Log(n / r, r) : 0;
+            
+            //return (n > 1) ? 1 + Log(n / r, r) : 0;
+
+            while (Power(x) < r);
+            
+                return result;
+            
+
         }
 
-        double Abs(double x) // модуль 
+        public double Abs(double x) // модуль 
         {
             if (x >= 0) { }
             else { x *= -1; }
             return x;
         }
 
-        double Factorial(int num) // факториал
+        public double Factorial(int num) // факториал
         {
             if (num <= 1)
             {
@@ -59,8 +65,9 @@ namespace lab4
             return num * Factorial(num - 1);
         }
 
-        double Power(double num, double pow) // степень
+        public double Power(double num, double pow) // степень
         {
+
             if (pow == 0)
             {
                 return 1;

@@ -36,17 +36,26 @@ namespace lab4
             return s * sign;
         }
 
-        public double Log(double x, double r)
+        public double Log(double osn, double x) // логорифм
         {
-            
-            //return (n > 1) ? 1 + Log(n / r, r) : 0;
 
-            while (Power(x) < r);
-            
-                return result;
-            
-
+            for (int s = 1; s <x;s++)
+            {
+                if (s == x)
+                {
+                    return s;
+                }
+                
+            }
+            double s2 = 0.00001;
+            while (Power(osn, s2) < x)
+            {
+                s2 = s2 + 0.00001;
+            }
+            return s2;
+                    
         }
+
 
         public double Abs(double x) // модуль 
         {
@@ -67,13 +76,19 @@ namespace lab4
 
         public double Power(double num, double pow) // степень
         {
-
+            double p= pow;
             if (pow == 0)
             {
                 return 1;
             }
-
-            return num * Power(num, pow - 1);
+            else
+            {
+                for (int i = 1; i <= pow; i++)
+                {
+                    p = p * pow;
+                }
+                return p;
+            }
         }
     }
 }

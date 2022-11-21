@@ -14,16 +14,10 @@ namespace lab4
         static void Main(string[] args)
         {
             Maths math = new Maths();
-            //Console.WriteLine("Введите x ");
-            //double x = Convert.ToDouble(Console.ReadLine());
-            //double v = Equations2(x);
-            //Console.WriteLine(v);
-
-            double v1 = math.Log(2, 129);
-            Console.WriteLine(v1);
-
-            //double v2 = math.Power(3,2);
-            //Console.WriteLine(v2);
+            Console.WriteLine("Введите x ");
+            double x = Convert.ToDouble(Console.ReadLine());
+            double v = Equations2(x);
+            Console.WriteLine(v);
 
 
             Console.ReadKey();

@@ -33,7 +33,7 @@ namespace lab4
             double t = x, s = x;
             for (int n = 3; Abs(t) > eps; n += 2)
                 s += t = -t * x * x / n / (n - 1);
-            return s * sign;
+            return s * sign;  
         }
 
         public double Log(double osn, double x) // логорифм

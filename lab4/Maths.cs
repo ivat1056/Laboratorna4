@@ -38,19 +38,18 @@ namespace lab4
 
         public double Log(double osn, double x) // логорифм
         {
-
+            
             for (int s = 1; s <x;s++)
             {
-                if (s == x)
+                if (Power(osn, s) == x)
                 {
                     return s;
                 }
-                
             }
-            double s2 = 0.00001;
+            double s2 = 0.0001;
             while (Power(osn, s2) < x)
             {
-                s2 = s2 + 0.00001;
+                s2 = s2 + 0.0001;
             }
             return s2;
                     
@@ -76,16 +75,16 @@ namespace lab4
 
         public double Power(double num, double pow) // степень
         {
-            double p= pow;
+            double p= num;
             if (pow == 0)
             {
                 return 1;
             }
             else
             {
-                for (int i = 1; i <= pow; i++)
+                for (int i = 1; i < pow; i++)
                 {
-                    p = p * pow;
+                    p = p * num;
                 }
                 return p;
             }

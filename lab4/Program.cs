@@ -19,7 +19,7 @@ namespace lab4
             //double v = Equations2(x);
             //Console.WriteLine(v);
 
-            double v1 = math.Log(2, 4);
+            double v1 = math.Log(2, 129);
             Console.WriteLine(v1);
 
             //double v2 = math.Power(3,2);
